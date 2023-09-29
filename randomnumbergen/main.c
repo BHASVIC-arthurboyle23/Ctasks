@@ -2,11 +2,24 @@
 #include <stdlib.h>
 #include <time.h>
 
-main() {
+int main() {
     srand(time(NULL));
-    int random = ( rand() % 10);
+    int random = ( rand() % 100);
     printf("Please input your guess for the random number: ");
     int guess1 = scanf("&d");
-    if ()
+    printf(random);
+    if (guess1 == random) {
+        printf("Congratulations, you are correct!");
+    }
+    if ((guess1 - 1) == random) {
+        printf("So close!");
 
+    }
+    if ((guess1 + 1) == random) {
+        printf("So close!");
+
+    }
+    if (guess1 != random) {
+        printf("Sorry, wrong answer");
+    }
 }
