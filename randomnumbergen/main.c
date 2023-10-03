@@ -6,8 +6,7 @@ int main() {
     srand(time(NULL));
     int random = ( rand() % 100);
     printf("Please input your guess for the random number: ");
-    int guess1 = scanf("&d");
-    printf(random);
+    int guess1 = scanf("&d", guess1);
     if (guess1 == random) {
         printf("Congratulations, you are correct!");
     }
