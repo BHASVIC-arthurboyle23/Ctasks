@@ -3,32 +3,43 @@
 #include <ctype.h>
 
 int main() {
-    int num1;
-    int num2;
+    float num1;
+    float num2;
     char operator;
-    int result;
+    float result;
+    setbuf(stdout,NULL);
     printf("Please enter your first number: ");
-    scanf("%d", &num1);
     fflush(stdin);
+    scanf("%f", &num1);;
     printf("Please enter your second number: ");
-    scanf("%d", &num2);
     fflush(stdin);
-    printf("Would you like to a) Add, b) Subtract, c) Mutliply,or d) Divide?: \n");
-    scanf("%s", &operator);
-    switch(operator)
-    {
-        case 'a':
-            result = (num1+num2);
-            break;
-        case 'b':
-            result = (num1-num2);
-            break;
-        case 'c':
-            result = (num1*num2);
-            break;
-        case 'd':
-            result = (num1/num2);
-            break;
+    scanf("%f", &num2);
+    printf("Would you like to a) Add, b) Subtract, c) Multiply,or d) Divide?: \n");
+    fflush(stdin);
+    scanf("%c", &operator);
+    if (!(isdigit(num1) && isdigit(num2))) {
+        switch(operator) {
+            case 'a':
+                result = (num1 + num2);
+                printf("%f + %f = %f", num1, num2, result);
+                break;
+            case 'b':
+                result = (num1 - num2);
+                printf("%f - %f = %f", num1, num2, result);
+                break;
+            case 'c':
+                result = (num1 * num2);
+                printf("%f / %f = %f", num1, num2, result);
+                break;
+            case 'd':
+                result = (num1 / num2);
+                printf("%f * %f = %f", num1, num2, result);
+                break;
+            default:
+                printf("Please choose a, b, c, or d.");
+        }
     }
-    printf("%d", result);
+    else {
+        printf("Please input a number");
+    }
 }
