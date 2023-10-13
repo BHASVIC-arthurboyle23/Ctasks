@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int timestable;
+    int lines;
+    int tempanswer;
+    int x;
+    printf("Please enter your desired timestable: ");
+    fflush(stdin);
+    scanf("%d", &timestable);
+    printf("Please enter your desired number of lines: ");
+    fflush(stdin);
+    scanf("%d", &lines);
+    for (x=1;x<=lines;x+1) {
+        tempanswer = (timestable*x);
+        printf("%d * %d = %d", timestable, lines, tempanswer);
+    }
+}
