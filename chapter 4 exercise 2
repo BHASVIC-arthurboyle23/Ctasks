@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numcount;
+    int loopcount = 0;
+    float numtotal;
+    int temp;
+    float average;
+    printf("Please enter how many numbers you would like to input: ");
+    scanf("%d", &numcount);;
+    do {
+        printf("Please enter a number: ");
+        fflush(stdin);
+        scanf("%d", &temp);
+        numtotal = (numtotal + temp);
+        loopcount = (loopcount+1);
+    } while (loopcount < numcount);
+    average = (numtotal/numcount);
+    printf("You entered %d numbers, the resulting total of which = %f. The average of all your numbers = %f.", numcount, numtotal, average);
+}
