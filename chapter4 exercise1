@@ -1,32 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
 int main() {
     srand(time(NULL));
-    int random = ( rand() % 100);
+    int random = (rand() % 100);
     int guesses = 0;
     int guess1;
-    do {
+    while ((guesses < 6) && (guess1 != random)){
         printf("Please input your guess for the random number: ");
         fflush(stdin);
-        scanf("&d", guess1);
-        printf("&d", guess1);
+        scanf("%d", &guess1);;
         if (guess1 == random) {
             printf("Congratulations, you are correct!");
         }
         if (guess1 != random) {
             printf("Sorry, wrong answer, ");
         }
+        if (guesses > 4) {
+            printf("you are out of guesses.");
+            break;
+        }
         if (guess1 > random) {
-            printf("Guess lower!");
+            printf("Guess lower!\n");
             guesses = (guesses+1);
-            return 0;
         }
         if (guess1 < random) {
-            printf("Guess higher!");
+            printf("Guess higher!\n");
             guesses = (guesses+1);
-            return 0;
+        
         }
-    } while ((guesses < 6) && (guess1 != random));
+    }
 }
