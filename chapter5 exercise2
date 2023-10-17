@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+    int cube;
+    int x;
+    printf("Please enter an integer: ");
+    scanf("%d", &num);
+    for (x=num;x>=1;x=x-1){
+        cube = (x*x*x);
+        printf("The cube of %d is %d.\n", x, cube);
+    }
+    return 0;
+}
