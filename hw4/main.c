@@ -16,7 +16,6 @@ int main() {
             int random1 = (rand() % 10);
             int random2 = (rand() % 10);
             int random3 = (rand() % 10);
-            printf("%d, %d, %d",random1, random2, random3);
             if (((random1 == random2) || (random1 == random3) || (random2 == random3)) &&
                 !((random1 == random2) && (random1 == random3)) &&
                 !(((random1 == 9) && (random2 == 9) && random3 != 9) ||
