@@ -32,7 +32,6 @@ void book_a_dinner_table() {
                 else {
                     printf("Table Tatooine at ");
                 }
-
                 if (x == 0) {
                     printf("7pm: ");
                 }
@@ -47,9 +46,9 @@ void book_a_dinner_table() {
                 }
             }
         }
-        printf("Please choose a table (Endor, Naboo, or Tatooine) and a time (7 or 9) for reservation: ");
+        printf("Please choose a table (Endor, Naboo, or Tatooine), a time (7 or 9), and number of guests for reservation: ");
         fflush(stdin);
-        scanf("%s %d", meal_sitting, &time);
+        scanf("%s %d %d", meal_sitting, &time, &num_of_guests);
         int table;
         if (strcmp(meal_sitting, "Endor") == 0) {
             table = 0;
@@ -65,22 +64,26 @@ void book_a_dinner_table() {
         }
         if (table >= 0 && table < 3 && (time == 7 || time == 9)) {
             if (dining_tables[table][time / 7 - 1] == 0) {
-                printf("Reservation confirmed for Table %s at %d pm.\n", meal_sitting, time);
-                dining_tables[table][time / 7 - 1] = 1;
+                if (num_of_guests <= 4) {
+                    printf("Reservation confirmed for Table %s at %d pm for %d guests.\n", meal_sitting, time, num_of_guests);
+                    dining_tables[table][time / 7 - 1] = 1;
+                }
+                else {
+                    printf("Not enough space on the table for %d guests.\n", num_of_guests);
+                }
             }
             else {
                 printf("The selected table and time are not available.\n");
             }
         }
         else {
-            printf("Invalid choice of table or time.\n");
+            printf("Invalid choice of table, time, or number of guests.\n");
         }
     }
     else {
         printf("Sorry, only FB and HB can book a reservation.\n");
     }
 }
-
 int main() {
     book_a_dinner_table();
     return 0;
