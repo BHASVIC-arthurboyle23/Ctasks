@@ -1,0 +1,29 @@
+board_choice = input("Do your have a FB, HB, or BB booking?: ")
+IF (board_choice = "FB") or (board_choice = "HB") THEN
+dining_tables = [2,3]
+desiredtable = input("Which table would you like: the Endor, the Naboo, or the Tatooine?: ")
+desiredtime = int(input("What time would you like: 7pm, or 9pm?: "))
+for i=0 to 2
+    for i=0 to 1
+        if i=0 THEN
+            PRINT("Table Endoor at")
+        else if i=1 THEN
+            PRINT("Table Naboo at")
+        else if i=2 THEN
+            PRINT("Table Tatooine at")
+        if x=0 THEN
+            PRINT("7pm: ")
+        else if x=1 THEN
+            PRINT("9pm: ")
+        if dining_tables[i, x]=0 THEN:
+            PRINT("Available")
+        else if dining_tables[i, x]=1 THEN
+            PRINT(Taken)
+table = INPUT("Please enter a table: Endor, Naboo, or Tatooine: ")
+time = INPUT("Please enter a time: 7pm or 9pm")
+if num_of_guests <= 4 THEN:
+    print("Thank you, your reservation at "+time+"pm on table "+table+" is booked.")
+else THEN
+    print("Too many guests, sorry.")
+END
+    
