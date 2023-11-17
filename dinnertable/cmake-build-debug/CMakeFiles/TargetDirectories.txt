@@ -1,0 +1,3 @@
+C:/Users/Administrator/Documents/GitHub/Ctasks/dinnertable/cmake-build-debug/CMakeFiles/dinnertable.dir
+C:/Users/Administrator/Documents/GitHub/Ctasks/dinnertable/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Documents/GitHub/Ctasks/dinnertable/cmake-build-debug/CMakeFiles/rebuild_cache.dir
