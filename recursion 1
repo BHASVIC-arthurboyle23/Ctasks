@@ -1,0 +1,16 @@
+#include <stdio.h>
+int num,x;
+
+int main() {
+    printf("Please enter a number: ");
+    scanf("%d", &num);
+}
+int number(int num){
+    if (num <= 1){
+        return 1;
+    }
+    else{
+        for {x=1;}
+        return (num);
+    }
+}
