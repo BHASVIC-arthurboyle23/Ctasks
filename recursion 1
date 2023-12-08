@@ -1,16 +1,21 @@
 #include <stdio.h>
-int num,x;
+int num,x, output;
 
 int main() {
     printf("Please enter a number: ");
     scanf("%d", &num);
+    output = number(num);
+    printf("%d", output);
 }
-int number(int num){
+int number(num){
     if (num <= 1){
         return 1;
+        printf("%d", num);
+        printf("y");
     }
     else{
-        for {x=1;}
-        return (num);
+        return num + number(num-1);
+        printf("%d", num);
+        printf("n");
     }
 }
