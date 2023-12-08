@@ -1,0 +1,10 @@
+#include <stdio.h>
+int num, x, i, multiplylist, addlist, perfectornot; 
+
+int main(){
+    printf("Please enter a number: ");
+    scanf("%d", &num);
+    for (i=num;i<0;i-1){
+        
+    }
+}
